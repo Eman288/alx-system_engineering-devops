@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-### this is the Shell, basics project
+Task 0 --> pwd
