@@ -1,2 +1,2 @@
 # alx-system_engineering-devops
-alx-system_engineering-devops project
+### this is the Shell, basics project
