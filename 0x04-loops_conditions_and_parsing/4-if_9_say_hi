@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #  a Bash script that displays Best School 10 times, but for the 9th different
-I=0
-while [ $I -lt 10 ]
+I=1
+while [ $I -lt 11 ]
 do
-	if [ $I == 8 ]; then
+	if [ $I == 9 ]; then
 		echo "Hi"
 	else
 		echo "Best School"
