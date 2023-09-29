@@ -3,5 +3,5 @@
 files=$(ls)
 for I in $files;
 do
-	echo "$I"
+	echo "$I" | cut -d'-' -f 2
 done
