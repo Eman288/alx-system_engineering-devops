@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a Bash script that displays
+files=$(ls)
+for I in $files;
+do
+	echo "$I"
+done
