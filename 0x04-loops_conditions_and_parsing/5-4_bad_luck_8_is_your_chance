@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# a Bash script that loops from 1 to 10 and do this:
+I=1
+while [ $I -lt 11 ]
+do
+	if [ $I == 8 ]; then
+		echo "good luck"
+	elif [ $I == 4 ]; then
+		echo "bad luck"
+	else
+		echo "Best School"
+	fi
+	((I++))
+done
