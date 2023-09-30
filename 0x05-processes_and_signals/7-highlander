@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a Bash script that displays
+I=0
+while [ $I -lt 1 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo "I am invincible!!!"' 15
+done
