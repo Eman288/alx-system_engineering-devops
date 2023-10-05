@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# 4. TCP and UDP ports
+# a Bash script that displays listening ports
 netstat -l --program
