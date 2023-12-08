@@ -1,4 +1,5 @@
 #!/bin/bash
+# a shell ro print some info of the server
 domain=$1
 subdomain=$2
 if [ -z "$subdomain" ]
