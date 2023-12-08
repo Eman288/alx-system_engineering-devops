@@ -1,0 +1,27 @@
+#!/bin/bash
+domain=$1
+subdomain=$2
+if [ -z "$subdomain" ]
+then
+	rec=`dig www.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $4}'`
+        des=`dig www.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $5}'`
+        ser="The subdomain www is a ${rec} record and points to ${des}"
+        echo $ser
+	rec=`dig lb-01.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $4}'`
+        des=`dig lb-01.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $5}'`
+        ser="The subdomain lb-01 is a ${rec} record and points to ${des}"
+        echo $ser
+	rec=`dig web-01.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $4}'`
+        des=`dig web-01.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $5}'`
+        ser="The subdomain web-01 is a ${rec} record and points to ${des}"
+        echo $ser
+	rec=`dig web-02.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $4}'`
+        des=`dig web-02.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $5}'`
+        ser="The subdomain web-02 is a ${rec} record and points to ${des}"
+        echo $ser
+else
+	rec=`dig ${subdomain}.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $4}'`
+	des=`dig ${subdomain}.${domain} | grep -A1 'ANSWER SECTION:' | awk '{print $5}'`
+	ser="The subdomain ${subdomain} is a ${rec} record and points to ${des}"
+	echo $ser
+fi
