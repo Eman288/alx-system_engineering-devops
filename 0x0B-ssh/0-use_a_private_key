@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#a Bash script that uses ssh to connect to your server using the private key
+ssh_cmd= `ssh -i ~/.ssh/school ubuntu@54.173.39.126`
+eval $ssh_cmd
