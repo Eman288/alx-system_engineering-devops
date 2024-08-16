@@ -14,4 +14,5 @@ sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bak
 sudo sed -i 's/listen 8080;/listen 80;/g' /etc/nginx/sites-enabled/default
 
 sudo systemctl restart nginx
+HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:80)
 
