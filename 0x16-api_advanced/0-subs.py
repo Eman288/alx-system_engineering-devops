@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
         a function to get the number of users for the subreddit
     """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    
+
     try:
         r = requests.get(url, allow_redirects=False)
 
