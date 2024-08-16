@@ -10,9 +10,11 @@ def number_of_subscribers(subreddit):
         a function to get the number of users for the subreddit
     """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-
+    header = {
+        'User-Agent': 'myapp:subscribers:v1.0'
+    }
     try:
-        r = requests.get(url, allow_redirects=False)
+        r = requests.get(url, headers=header, allow_redirects=False)
 
         if r.status_code == 200:
             data = r.json()
