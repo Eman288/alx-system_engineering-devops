@@ -5,7 +5,7 @@
 **Duration:** August 18, 2024, 09:00 - 12:00 UTC  
 **Impact:** On August 18, our session state decided to play a prank, randomly logging out about 50% of our active users. This unexpected “break” from sessions led to significant user frustration and disrupted service.
 
-![Funny Cartoon](https://example.com/funny-cartoon.jpg)  
+![Funny Cartoon](https://configcat.com/blog/assets/test-production/2-stand-back.jpg)  
 *“When your session state decides to take a nap.”*
 
 ## Timeline
@@ -18,7 +18,6 @@
 - **11:00 UTC** - **Root Cause Identified:** Found that a misconfiguration in the session state settings of the ASP.NET Core application was the culprit.
 - **11:30 UTC** - **Resolution:** Corrected the session state configuration, resolving the issue. Users were able to resume their sessions without further problems.
 
-![Timeline Diagram](https://example.com/timeline-diagram.png)
 
 ## Root Cause and Resolution
 
@@ -46,4 +45,3 @@ The distributed cache configuration was corrected to ensure proper session state
 4. **Update Monitoring:** Enhance monitoring to include specific alerts for session state failures.
 5. **Post-Implementation Review:** Conduct a review to verify that no further issues exist and to refine the process.
 
-![Infographic](https://example.com/infographic.png)
