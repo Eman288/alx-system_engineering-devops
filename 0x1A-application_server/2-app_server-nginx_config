@@ -3,7 +3,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name 35.231.193.217;
+    server_name 54.237.29.36;
 
     add_header X-Served-By $hostname;
 
