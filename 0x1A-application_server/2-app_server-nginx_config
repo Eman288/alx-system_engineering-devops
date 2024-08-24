@@ -1,7 +1,12 @@
 #a file to configure the nginx server and made it listen to port 80
 server {
-    listen 80;
+    listen      80 default_server;
+    listen      [::]:80 default_server ipv6only=on;
+ 
     server_name 54.237.29.36;
+
+
+    add_header  X-Served-By 375-web-01;
 
     location = /airbnb-onepage/ {
         proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
