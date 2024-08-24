@@ -20,9 +20,8 @@ file { '/etc/nginx/nginx.conf':
 }
 
 exec { 'tune-nginx':
-  command => 'sed -i "s/worker_connections 768;/worker_connections 4096;/" /etc/nginx/nginx.conf',
-  onlyif  => 'grep -q "worker_connections 768;" /etc/nginx/nginx.conf',
-  notify  => Service['nginx'],
+  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin/',
 }
 
 exec { 'restart-nginx':
