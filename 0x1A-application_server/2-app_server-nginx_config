@@ -1,7 +1,7 @@
 #a file to configure the nginx server and made it listen to port 80
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+    listen 80;
+    listen [::]:80;
 
     server_name 35.231.193.217;
 
