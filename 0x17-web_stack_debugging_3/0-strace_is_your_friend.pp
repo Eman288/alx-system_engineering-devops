@@ -8,7 +8,7 @@ file { '/var/www/missing_directory':
 }
 
 service { 'apache2':
-  ensure     => 'running',
-  enable     => true,
-  subscribe  => File['/var/www/missing_directory'],
+  ensure    => 'running',
+  enable    => true,
+  subscribe => File['/var/www/missing_directory'],
 }
