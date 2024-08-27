@@ -1,14 +1,6 @@
 # fixing the 500 error
 
-file { '/var/www/missing_directory':
-  ensure => 'directory',
-  owner  => 'www-data',
-  group  => 'www-data',
-  mode   => '0755',
-}
-
-service { 'apache2':
-  ensure    => 'running',
-  enable    => true,
-  subscribe => File['/var/www/missing_directory'],
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
 }
